@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "meudentapp",
+    "slug": "meudentapp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "meudentapp"
+}
