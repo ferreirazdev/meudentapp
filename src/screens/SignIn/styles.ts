@@ -13,10 +13,22 @@ export const Header = styled.View`
   align-items: center;
 `;
 
-export const Form = styled.View``;
+export const Form = styled.View`
+  width: 100%;
+  margin: 64px 0;
+`;
 
 export const Footer = styled.View``;
 
 export const RegisterWrapper = styled.View``;
 
-export const AuthWrapper = styled.View``;
+export const AuthWrapper = styled.View`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ButtonAuthWrapper = styled.View`
+  display: flex;
+  flex-direction: row;
+`;
+
