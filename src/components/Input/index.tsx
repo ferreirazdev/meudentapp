@@ -33,7 +33,8 @@ export function Input({
       </IconContainer>
 
       <InputText 
-
+        autoCorrect={false}
+        {...rest}
       />
     </Container>
   );

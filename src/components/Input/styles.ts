@@ -5,14 +5,13 @@ import { TextInput } from 'react-native';
 export const Container = styled.View`
   flex-direction: row;
   margin-bottom: 10px;
-  padding: 5px;
   border-radius: 30px;
   background-color: ${({ theme }) => theme.colors.background_secondary};
 `;
 
 export const IconContainer = styled.View`
-  height: 56px;
-  width: 55px;
+  height: 46px;
+  width: 45px;
   justify-content: center;
   align-items: center;
   border-radius: 30px;

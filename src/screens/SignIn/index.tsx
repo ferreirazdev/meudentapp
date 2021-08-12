@@ -1,7 +1,12 @@
 import React from 'react';
-import { Text } from 'react-native';
-import { Input } from '../../components/Input';
+import {
+  StatusBar,
+  KeyboardAvoidingView,
+  TouchableWithoutFeedback,
+  Keyboard
+} from 'react-native'
 import LogoSvg from '../../assets/logo.svg';
+import { Input } from '../../components/Input';
 import { PasswordInput } from '../../components/PasswordInput';
 
 import { 
@@ -10,42 +15,56 @@ import {
   Form,
   Footer,
   RegisterWrapper,
-  AuthWrapper,
-  ButtonAuthWrapper
+  FooterText,
+  CreateAccountButton,
 } from './styles';
+import theme from '../../styles/theme';
+import { Button } from '../../components/Button';
 
 export function SignIn(){
   return (
-    <Container>
-      <Header>
-        <LogoSvg />
-      </Header>
-      <Form>
-        <Input 
-          iconName="mail"
-          placeholder="Digite seu e-mail"
-          keyboardType="email-address"
-          autoCorrect={false}
-          autoCapitalize="none"
-        />
-        <PasswordInput 
-          iconName="lock"
-          placeholder="Digite sua senha"
-        />
-      </Form>
-      <Footer>
-       <RegisterWrapper>
-          <Text>Ainda não tem conta?</Text>
-          <Text>Criar conta</Text>
-       </RegisterWrapper>
-       <AuthWrapper>
-          <Text>Ou faça login com:</Text>
-          <ButtonAuthWrapper>
-            <Text>Google</Text>
-            <Text>Apple</Text>
-          </ButtonAuthWrapper>
-       </AuthWrapper>
-      </Footer>
-    </Container>
+    <KeyboardAvoidingView
+      behavior="position" enabled
+    >
+      <TouchableWithoutFeedback>
+        <Container>
+          <StatusBar
+            barStyle="dark-content"
+            backgroundColor="transparent"
+            translucent
+          />
+          <Header>
+            <LogoSvg />
+          </Header>
+          <Form>
+            <Input 
+              iconName="mail"
+              placeholder="Digite seu e-mail"
+              keyboardType="email-address"
+              autoCorrect={false}
+              autoCapitalize="none"
+            />
+            <PasswordInput 
+              iconName="lock"
+              placeholder="Digite sua senha"
+            />
+            <Button 
+              title="Login"
+              color={theme.colors.secondary}
+            />
+          </Form>
+          <Footer>
+          <RegisterWrapper>
+              <FooterText>Ainda não tem conta?</FooterText>
+              <CreateAccountButton
+                title="Criar conta"
+                onPress={() => {}}
+                color={theme.colors.secondary}
+              />
+          </RegisterWrapper>
+          </Footer>
+        </Container>
+      </TouchableWithoutFeedback>
+    </KeyboardAvoidingView>
   );
 }

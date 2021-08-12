@@ -32,7 +32,10 @@ export function PasswordInput({
         />
       </IconContainer>
 
-      <InputText />
+      <InputText 
+        autoCorrect={false}
+        {...rest}
+      />
 
       <BorderlessButton>
         <IconContainer>
