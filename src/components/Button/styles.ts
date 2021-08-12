@@ -19,6 +19,7 @@ export const Container = styled(RectButton)<ButtonProps>`
   border-radius: 25px;
 
   background-color: ${({ color }) => color};
+  margin-top: 8px;
   margin-bottom: 8px;
   
 `;

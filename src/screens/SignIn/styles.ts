@@ -30,10 +30,15 @@ export const RegisterWrapper = styled.View`
 `;
 
 export const FooterText = styled.Text`
-  font-size: ${RFValue(20)}px;
+  font-size: ${RFValue(18)}px;
+  color: ${({ theme }) => theme.colors.text};
+  margin-right: 5px;
 `;
 
-export const CreateAccountButton = styled.Button`
+export const CreateAccountButton = styled.Text` 
+  font-size: ${RFValue(17)}px;
+  color: ${({ theme }) => theme.colors.secondary};
+  text-decoration: underline;
 `;
 
 

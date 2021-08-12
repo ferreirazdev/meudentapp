@@ -56,11 +56,7 @@ export function SignIn(){
           <Footer>
           <RegisterWrapper>
               <FooterText>Ainda não tem conta?</FooterText>
-              <CreateAccountButton
-                title="Criar conta"
-                onPress={() => {}}
-                color={theme.colors.secondary}
-              />
+              <CreateAccountButton>Criar conta</CreateAccountButton>
           </RegisterWrapper>
           </Footer>
         </Container>
