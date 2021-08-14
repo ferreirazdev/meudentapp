@@ -7,7 +7,7 @@ import LogoSvg from '../../../assets/logo.svg'
 import { BackButton } from '../../../components/BackButton';
 import { Bullet } from '../../../components/Bullet';
 import { Button } from '../../../components/Button';
-import { Input } from '../../../components/Input';
+import { PasswordInput } from '../../../components/PasswordInput';
 
 import { 
   Container,
@@ -18,7 +18,7 @@ import {
   FormTitle
 } from './styles';
 
-export function SignUpFirstStep(){
+export function SignUpSecondStep(){
   return (
     <KeyboardAvoidingView behavior="position" enabled>
       <TouchableWithoutFeedback>
@@ -27,27 +27,21 @@ export function SignUpFirstStep(){
             <LogoSvg />
             <HeaderWrapper>
               <BackButton />
-              <FormTitle>1. Dados</FormTitle>
+              <FormTitle>2. Senha</FormTitle>
               <Steps>
-                <Bullet active/>
                 <Bullet/>
+                <Bullet active/>
               </Steps>
             </HeaderWrapper>
           </Header>
           <Form>
-            <Input 
-              iconName="user"
-              placeholder="Digite seu nome"
+            <PasswordInput 
+              iconName="lock"
+              placeholder="Digite uma senha"
             />
-            <Input 
-              iconName="mail"
-              placeholder="Digite seu e-mail"
-              keyboardType="email-address"
-            />
-            <Input 
-              iconName="credit-card"
-              placeholder="Digite seu CPF"
-              keyboardType="numeric"
+            <PasswordInput 
+              iconName="lock"
+              placeholder="Confirme a senha"
             />
             <Button
               title="Próximo"
