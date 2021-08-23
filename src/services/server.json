@@ -1,15 +1,49 @@
 {
 	"services": [
 		{
-			"id": "0",
+			"id": "535e8de8-721b-4bac-8b72-7d29be7da467",
 			"type": "Básico",
 			"name": "Limpeza",
 			"about": "Com a limpeza você estará cuidando dos seus dentes...",
-			"payment": {
-				"period": "Consulta",
-				"price": 30
-			},
-			"thumbnail": "../assets/doctor1.png"
+			"period": "Consulta",
+			"price": 30,			
+			"thumbnail": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.integraoral.com.br%2Fwp-content%2Fuploads%2F2016%2F11%2FLimpeza-Dent%25C3%25A1ria-Mantendo-seus-dentes-bem-limpos.png&f=1&nofb=1"
+		},
+		{
+			"id": "ffb71f55-818a-48b1-b7d2-2efc406ede25",
+			"type": "Estético",
+			"name": "Restauração",
+			"about": "Com a limpeza você estará cuidando dos seus dentes...",
+			"period": "Consulta",
+			"price": 80,
+			"thumbnail": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.consultoriodentista.com.br%2Fimages%2Fimg-mpi%2Fdentista-especialista-em-restauracao-1.jpg&f=1&nofb=1"
+		},
+		{
+			"id": "52930821-cbea-4b05-9f45-7c02b1bb0d8c",
+			"type": "Manutenção",
+			"name": "Reparação no Aparelho",
+			"about": "Com a limpeza você estará cuidando dos seus dentes...",
+			"period": "Consulta",
+			"price": 120,
+			"thumbnail": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.simdentista.com.br%2Fwp-content%2Fuploads%2F2020%2F04%2FAparelho-SIM-1.jpg&f=1&nofb=1"
+		},
+		{
+			"id": "49983f6c-a46a-4dfd-a86e-425b8c72e086",
+			"type": "Estético",
+			"name": "Aplicação de Lentes",
+			"about": "Com a limpeza você estará cuidando dos seus dentes...",
+			"period": "Consulta",
+			"price": 80,
+			"thumbnail": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.supersorriso.com.br%2Fdev%2Fimagens%2Finformacoes%2Flentes-de-contato-odontologia-03.jpg&f=1&nofb=1"
+		},
+		{
+			"id": "508e7193-0078-4615-9071-920b59038fda",
+			"type": "Cirutgico",
+			"name": "Extração",
+			"about": "Com a limpeza você estará cuidando dos seus dentes...",
+			"period": "Consulta",
+			"price": 80,
+			"thumbnail": ".https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.sorrisocard.com.br%2Fimages%2Fimg-mpi%2F300x220%2Fextracao-de-dente-03.jpg&f=1&nofb=1"
 		}
 	]
 }

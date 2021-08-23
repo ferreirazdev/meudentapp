@@ -24,14 +24,16 @@ export function Home(){
     
   }
 
-  async function fetchServices(){
-    const response = await api.get('/services')
-
-    setServices(response.data)
-    setLoading(false)
-  }
+  
 
   useEffect(() => {
+    async function fetchServices(){
+      const response = await api.get('/services')
+  
+      setServices(response.data)
+      setLoading(false)
+    }
+    
     fetchServices();
   }, [])
 
