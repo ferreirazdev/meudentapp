@@ -1,11 +1,14 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
 import { SearchInput } from '../../components/SearchInput';
+import { ServiceCard } from '../../components/ServiceCard';
 import LogoSvg from '../../assets/logo.svg'
+
 import { 
   Container,
   Header,
-  SearchBarWrapper
+  SearchBarWrapper,
+  ServicesList
 } from './styles';
 
 export function Home(){
@@ -27,6 +30,15 @@ export function Home(){
           />
         </SearchBarWrapper>
       </Header>
+
+      <ServicesList>
+        <ServiceCard />
+        <ServiceCard />
+        <ServiceCard />
+        <ServiceCard />
+        <ServiceCard />
+        <ServiceCard />
+      </ServicesList>
     </Container>
   );
 }
