@@ -1,13 +1,18 @@
 import React from 'react';
+
 import {
   StatusBar,
   KeyboardAvoidingView,
   TouchableWithoutFeedback,
   Keyboard
 } from 'react-native'
+
 import LogoSvg from '../../assets/logo.svg';
 import { Input } from '../../components/Input';
 import { PasswordInput } from '../../components/PasswordInput';
+
+import { Button } from '../../components/Button';
+import { useNavigation } from '@react-navigation/native';
 
 import { 
   Container,
@@ -18,10 +23,22 @@ import {
   FooterText,
   CreateAccountButton,
 } from './styles';
+
 import theme from '../../styles/theme';
-import { Button } from '../../components/Button';
+
 
 export function SignIn(){
+
+  const navigation = useNavigation();
+
+  function handleNewAccount() {
+    navigation.navigate('SignUpFirstStep')
+  }
+
+  function handleLogin() {
+    navigation.navigate('Home')
+  }
+
   return (
     <KeyboardAvoidingView
       behavior="position" enabled
@@ -51,12 +68,13 @@ export function SignIn(){
             <Button 
               title="Login"
               color={theme.colors.secondary}
+              onPress={handleLogin}
             />
           </Form>
           <Footer>
           <RegisterWrapper>
               <FooterText>Ainda não tem conta?</FooterText>
-              <CreateAccountButton>Criar conta</CreateAccountButton>
+              <CreateAccountButton onPress={handleNewAccount}>Criar conta</CreateAccountButton>
           </RegisterWrapper>
           </Footer>
         </Container>

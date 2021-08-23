@@ -51,4 +51,5 @@ export const Price = styled.Text`
 export const DoctorImg = styled.Image`
     width: 167px;
     height: 85px;
+    border-radius: 50px;
 `;

@@ -6,11 +6,12 @@ import { SignUpFirstStep } from './src/screens/SignUp/SignUpFirstStep';
 import { SignUpSecondStep } from './src/screens/SignUp/SignUpSecondStep';
 import { Home } from './src/screens/Home';
 import theme from './src/styles/theme';
+import { Routes } from './src/routes';
 
 export default function App() {
   return (
     <ThemeProvider theme={theme}> 
-      <Home />
+      <Routes />
     </ThemeProvider>
   );
 }

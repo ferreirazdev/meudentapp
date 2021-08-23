@@ -28,6 +28,7 @@ export function Button({
   return (
     <Container
       color={color ? color : theme.colors.secondary}
+      onPress={onPress}
     >
       {
         loading

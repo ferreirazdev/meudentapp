@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import {
   KeyboardAvoidingView,
@@ -19,6 +20,18 @@ import {
 } from './styles';
 
 export function SignUpSecondStep(){
+
+
+  const navigation = useNavigation()
+
+  function handleBack(){
+    navigation.goBack()
+  }
+
+  function handleRegister() {
+    navigation.navigate('Home')
+  }
+
   return (
     <KeyboardAvoidingView behavior="position" enabled>
       <TouchableWithoutFeedback>
@@ -44,7 +57,8 @@ export function SignUpSecondStep(){
               placeholder="Confirme a senha"
             />
             <Button
-              title="Próximo"
+              title="Cadastrar"
+              onPress={handleRegister}
             />
           </Form>
         </Container>

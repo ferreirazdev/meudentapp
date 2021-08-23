@@ -8,6 +8,7 @@ import { BackButton } from '../../../components/BackButton';
 import { Bullet } from '../../../components/Bullet';
 import { Button } from '../../../components/Button';
 import { Input } from '../../../components/Input';
+import { useNavigation } from '@react-navigation/native';
 
 import { 
   Container,
@@ -19,6 +20,18 @@ import {
 } from './styles';
 
 export function SignUpFirstStep(){
+  
+  const navigation = useNavigation()
+
+  function handleBack(){
+    navigation.goBack()
+  }
+
+  function handleNextStep() {
+    navigation.navigate('SignUpSecondStep')
+  }
+
+
   return (
     <KeyboardAvoidingView behavior="position" enabled>
       <TouchableWithoutFeedback>
@@ -26,7 +39,9 @@ export function SignUpFirstStep(){
           <Header>
             <LogoSvg />
             <HeaderWrapper>
-              <BackButton />
+              <BackButton 
+                onPress={handleBack}
+              />
               <FormTitle>1. Dados</FormTitle>
               <Steps>
                 <Bullet active/>
@@ -51,6 +66,7 @@ export function SignUpFirstStep(){
             />
             <Button
               title="Próximo"
+              onPress={handleNextStep}
             />
           </Form>
         </Container>
