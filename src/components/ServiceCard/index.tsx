@@ -1,12 +1,13 @@
 import React from 'react';
-import { RectButton } from 'react-native-gesture-handler';
+import { RectButtonProps } from 'react-native-gesture-handler';
+import { ServicesDTO } from '../../dtos/ServicesDTO';
 
 import PngDoctor from '../../assets/doctor1.png';
 
 import {
     Container, 
     Details,
-    Brand,
+    Type,
     Name,
     About,
     Rent,
@@ -15,23 +16,27 @@ import {
     DoctorImg
 } from './styles'
 
-export function ServiceCard(){
+interface Props extends RectButtonProps {
+  data: ServicesDTO;
+}
+
+export function ServiceCard({ data, ...rest }: Props){
     return (
         <Container>
             <Details>
-                <Brand>Básico</Brand>
-                <Name>Limpeza e Manutenção</Name>
+                <Type>{data.type}</Type>
+                <Name>{data.name}</Name>
 
                 <About>
                     <Rent>
-                        <Period>Consulta</Period>
-                        <Price>R$30,00</Price>
+                        <Period>{data.period}</Period>
+                        <Price>{`R$ ${data.price}`}</Price>
                     </Rent>
                 </About>
             </Details>
 
             <DoctorImg 
-                source={PngDoctor}
+                source={{uri: data.thumbnail}}
                 resizeMode="contain"
             />
             

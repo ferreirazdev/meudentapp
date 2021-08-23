@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
 import { FlatList } from 'react-native';
+import { ServicesDTO } from '../../dtos/ServicesDTO';
 
 export const Container = styled.View`
   flex: 1;
@@ -16,6 +17,11 @@ export const SearchBarWrapper = styled.View`
   margin-top: 15px;
 `;
 
-export const ServicesList = styled.View`
-  padding: 24px;
+export const ServicesList = styled(FlatList as new () => FlatList<ServicesDTO>)
+.attrs({
+  contentContainerStyle: {
+    padding: 24
+  },
+  showVerticalSrollIndicator: false
+})`
 `;

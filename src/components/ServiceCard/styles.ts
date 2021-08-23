@@ -19,7 +19,7 @@ export const Details = styled.View`
     
 `;
 
-export const Brand = styled.Text`
+export const Type = styled.Text`
     color: ${({ theme }) => theme.colors.text};
 `;
 
@@ -46,10 +46,6 @@ export const Period = styled.Text`
 export const Price = styled.Text`
     color: ${({ theme }) => theme.colors.secondary};
     font-weight: 700;
-`;
-
-export const Type = styled.View`
-    
 `;
 
 export const DoctorImg = styled.Image`
