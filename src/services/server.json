@@ -1,0 +1,15 @@
+{
+	"services": [
+		{
+			"id": "1",
+			"type": "Básico",
+			"name": "Limpeza",
+			"about": "Com a limpeza você estará cuidando dos seus dentes...",
+			"payment": {
+				"period": "Consulta",
+				"price": 30
+			},
+			"thumbnail": "../assets/doctor1.png"
+		}
+	]
+}
