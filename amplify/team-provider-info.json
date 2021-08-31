@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-meudent-dev-124937-authRole",
+      "UnauthRoleArn": "arn:aws:iam::359967826826:role/amplify-meudent-dev-124937-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::359967826826:role/amplify-meudent-dev-124937-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-meudent-dev-124937-deployment",
+      "UnauthRoleName": "amplify-meudent-dev-124937-unauthRole",
+      "StackName": "amplify-meudent-dev-124937",
+      "StackId": "arn:aws:cloudformation:us-east-1:359967826826:stack/amplify-meudent-dev-124937/0dcae400-0a73-11ec-b2e4-12f58cde642f",
+      "AmplifyAppId": "dwzi6rk6e0o2u"
+    },
+    "categories": {
+      "auth": {
+        "meudent3f1d545b": {}
+      }
+    }
+  }
+}
